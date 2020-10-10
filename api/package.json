@@ -1,0 +1,17 @@
+{
+  "name": "sa-practica8",
+  "version": "1.0.0",
+  "description": "Practica 8 de SA",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "start": "node index.js"
+  },
+  "author": "Andree Avalos",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}

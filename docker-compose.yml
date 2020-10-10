@@ -1,0 +1,27 @@
+version: '3.1'
+services: 
+    db:
+        build:
+            context: ./mysql/
+            dockerfile: Dockerfile
+        container_name: mysql
+        restart: always
+        environment:
+            MYSQL_DATABASE: db_p8
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: root
+        network_mode: "bridge"
+        ports:
+            - "3306:3306"
+        volumes: 
+            - "./data:/var/lib/mysql"
+    api:
+        build:
+            context: ./api/
+            dockerfile: Dockerfile
+        container_name: api-node
+        restart: always
+        network_mode: "bridge"
+        ports:
+            - "8080:8080"
